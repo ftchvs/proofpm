@@ -1,0 +1,28 @@
+{
+  "name": "proofpm",
+  "version": "0.0.0",
+  "description": "Evidence-backed product judgment from your terminal.",
+  "type": "module",
+  "bin": {
+    "proofpm": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test",
+    "lint": "echo 'lint not configured yet'"
+  },
+  "keywords": [
+    "product-management",
+    "ai",
+    "cli",
+    "prd",
+    "roadmap",
+    "linear",
+    "github",
+    "growth"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
