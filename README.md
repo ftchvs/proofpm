@@ -18,6 +18,10 @@ Product teams do not need more AI-generated documents. They need better judgment
 
 ProofPM turns scattered product signals into decision-ready artifacts.
 
+## Tech choice
+
+ProofPM is designed as a **Bun-first TypeScript CLI**: fast startup, simple scripts, built-in test runner, easy single-runtime developer experience, and smooth distribution via npm once compiled.
+
 ## Example CLI
 
 ```bash

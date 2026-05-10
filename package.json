@@ -6,9 +6,13 @@
   "bin": {
     "proofpm": "./dist/cli.js"
   },
+  "engines": {
+    "bun": ">=1.1.0"
+  },
   "scripts": {
-    "build": "tsc",
-    "test": "node --test",
+    "dev": "bun run src/cli.ts",
+    "build": "bun build src/cli.ts --outdir dist --target bun",
+    "test": "bun test",
     "lint": "echo 'lint not configured yet'"
   },
   "keywords": [

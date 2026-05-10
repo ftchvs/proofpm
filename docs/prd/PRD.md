@@ -348,12 +348,22 @@ Create PRD with scope limited to import feedback, error taxonomy, and success-st
 
 Recommended stack for v1:
 
-- TypeScript CLI using `commander` or `oclif`.
+- **Bun-first TypeScript CLI** using `commander`, `cac`, or a small custom command router.
+- Bun scripts for dev/test/build speed: `bun run dev`, `bun test`, `bun run build`.
 - SQLite or JSONL for local store.
 - GitHub via `gh` first for auth simplicity, then Octokit.
 - LLM provider abstraction: OpenAI-compatible endpoint, Anthropic, local Ollama.
 - Markdown artifact renderer.
 - Optional MCP server later using the same core engine.
+
+Why Bun:
+
+- Fast CLI startup and smooth local developer experience.
+- Built-in TypeScript execution for development.
+- Built-in test runner for early MVP speed.
+- Easy path to npm distribution while keeping scripts simple.
+
+Risk: some users may not have Bun installed. Mitigation: publish compiled npm package later so end users can install normally, while contributors use Bun for development.
 
 ## 14. Differentiators
 
@@ -421,11 +431,10 @@ ProofPM is useful without MCP, but the core engine should expose functions that 
 
 ## 17. Open questions
 
-1. Should v1 use TypeScript or Python?
-2. Should GitHub ingestion use `gh` shell-out first or Octokit OAuth from day one?
-3. Should the default local store be JSONL for transparency or SQLite for querying?
-4. Should the first artifact be `Decision Brief` or `PRD`?
-5. Should the public repo include a fake demo dataset from day one?
+1. Should GitHub ingestion use `gh` shell-out first or Octokit OAuth from day one?
+2. Should the default local store be JSONL for transparency or SQLite for querying?
+3. Should the first artifact be `Decision Brief` or `PRD`?
+4. Should the public repo include a fake demo dataset from day one?
 
 ## 18. Launch plan
 
